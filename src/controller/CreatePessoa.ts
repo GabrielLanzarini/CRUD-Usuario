@@ -16,7 +16,7 @@ export class CreatePessoa {
                     .status(400)
                     .json({ message: "Usuário já cadastrado!" })
 
-            if (email)
+            if (emailConfirm)
                 return res
                     .status(400)
                     .json({ message: "E-mail já cadastrado!" })
