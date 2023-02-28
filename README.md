@@ -10,6 +10,36 @@
 MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL usando uma ORM.
 
 
+
+
+<h2>
+	🔨 Instalando a Aplicação 
+</h2>
+
+
+* Clone o repositório em sua máquina
+
+```bash
+
+$ git clone https://github.com/GabrielLanzarini/MVC-usuario
+```
+
+* Defina as variáveis de ambiente em um arquivo .env da seguinte forma
+
+```env
+DB_HOST = "Host do Banco de dados"
+DB_PORT = "Porta do Banco de dados"
+DB_USER = "Usuário do Banco de dados" 
+DB_PASS = "Senha do Banco de dados"
+DB_DATA = "Nome do Banco de dados"
+
+SECRET_KEY = "Chave Secreta para geração do JWT"
+
+PORT = "Porta da api"
+```
+
+
+
 <!--ts-->
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
