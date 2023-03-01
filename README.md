@@ -11,14 +11,16 @@
    * [Sobre](#sobre)
    * [Rodando a aplicação](#rodando-a-aplicação)
    	 * [Pré-requisitos](#pré-requisitos)
-   	 * [Pré-requisitos](#pré-requisitos)
-   	 * [Pré-requisitos](#pré-requisitos)
+   	 * [Instalando a aplicação](#instalando-a-aplicação)
+   * [Rotas da API e funções](#rotas-da-api-e-funções)
+   	 * [Rotas sem login](#rotas-sem-login)
+   	 * [Rotas com o usuário logado](#rotas-com-o-usuário-logado)
 <!--te-->
 
 # Sobre
 MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL utilizando uma ORM.
 
-# 💻 Rodando a aplicação
+# Rodando a aplicação
 
 ### Pré-requisitos
 
@@ -62,6 +64,7 @@ $ npm run dev
 
 
 # Rotas da API e funções 
+## Rotas sem login
 - **`POST /create/pessoas`**: A rota deve receber `first_name`, `last_name`, `username`, `password` e `email` dentro do corpo da requisição.
 - Ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
 ```JSON
