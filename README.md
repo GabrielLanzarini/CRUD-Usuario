@@ -6,19 +6,28 @@
     🔑 API Login 🔒 
 </h1>
 
-
+# Índice
 <!--ts-->
    * [Sobre](#sobre)
+   * [Tecnologias](#tecnologias)
    * [Rodando a aplicação](#rodando-a-aplicação)
-   	 * [Pré-requisitos](#pré-requisitos)
-   	 * [Instalando a aplicação](#instalando-a-aplicação)
    * [Rotas da API e funções](#rotas-da-api-e-funções)
-   	 * [Rotas sem login](#rotas-sem-login)
-   	 * [Rotas com o usuário logado](#rotas-com-o-usuário-logado)
 <!--te-->
 
 # Sobre
 MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL utilizando uma ORM.
+
+# Tecnologias 
+- [Node.JS](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [TypeORM](https://typeorm.io/)
+- [Postgres](https://www.pgadmin.org/)
+- [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)
+- [Express](https://expressjs.com/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [ts-node](https://www.npmjs.com/package/ts-node)
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser)
+- [nodemon](https://www.npmjs.com/package/nodemon)
 
 # Rodando a aplicação
 
@@ -120,3 +129,6 @@ $ npm run dev
 - **`DELETE /pessoa/delete`**
 - A rota deve deleta o usuário logado do banco de dados:
 
+---
+
+Desenvolvido por [Gabriel Henrique Antonelli Lanzarini](https://www.linkedin.com/in/gabriel-henrique-antonelli-lanzarini-16b522209/)
