@@ -15,7 +15,7 @@
 <!--te-->
 
 # Sobre
-MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL utilizando uma ORM.
+Aplicação desenvolvida com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL utilizando uma ORM e um token JWT.
 
 # Tecnologias 
 - [Node.JS](https://nodejs.org/en/)
