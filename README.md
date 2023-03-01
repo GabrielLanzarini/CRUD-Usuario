@@ -2,30 +2,44 @@
 	✅ Concluído ✅
 </h4>
 
-<h1 align="center" text-color="red">
+<h1 align="center">
     🔑 API Login 🔒 
 </h1>
 
-## Descrição do Projeto
-MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL usando uma ORM.
 
+<!--ts-->
+   * [Sobre](#sobre)
+   * [Rodando a aplicação](#rodando-a-aplicação)
+   	 * [Pré-requisitos](#pré-requisitos)
+   	 * [Pré-requisitos](#pré-requisitos)
+   	 * [Pré-requisitos](#pré-requisitos)
+<!--te-->
 
+# Sobre
+MVC desenvolvido com a finalidade de aprofundar os conhecimentos da integração de uma API com o Banco de Dados PostgreSQL utilizando uma ORM.
 
+# 💻 Rodando a aplicação
 
-<h2>
-	🔨 Instalando a Aplicação 
-</h2>
+### Pré-requisitos
 
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [PgAdmin](https://www.pgadmin.org/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-* Clone o repositório em sua máquina
+### Instalando a aplicação
 
 ```bash
-
+# Clone este repositório
 $ git clone https://github.com/GabrielLanzarini/MVC-usuario
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd MVC-usuario
+
+# Instale as dependências
+$ npm install
 ```
 
-* Defina as variáveis de ambiente em um arquivo .env da seguinte forma
-
+#### Defina as variáveis de ambiente em um arquivo .env da seguinte forma.
 ```env
 DB_HOST = "Host do Banco de dados"
 DB_PORT = "Porta do Banco de dados"
@@ -35,20 +49,71 @@ DB_DATA = "Nome do Banco de dados"
 
 SECRET_KEY = "Chave Secreta para geração do JWT"
 
-PORT = "Porta da api"
+PORT = 3000
+``` 
+
+```env
+# Rode a migração para a criação da tabela no Banco de Dados
+$ npm run migration:run
+
+$ npm run dev
+# O servidor vai rodar na porta 3000 no endereço http://localhost:3000
 ```
 
 
+# Rotas da API e funções 
+- **`POST /create/pessoas`**: A rota deve receber `first_name`, `last_name`, `username`, `password` e `email` dentro do corpo da requisição.
+- Ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+```JSON
+{
+	"first_name": string,
+	"last_name": string,
+	"username": string,
+	"password": string,
+	"email": string
+}
+```
 
-<!--ts-->
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
-   * [Tecnologias](#tecnologias)
-<!--te-->
+- **`POST /login`**
+- A rota deve receber `username` e `password` dentro do corpo da requisição.
+- Com o login bem sucedido ele armazenará um JWT nos cookies da sessão.
+- Ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+```JSON
+{
+	"username": string,
+	"password": string,
+}
+```
+>  Para o login ser bem sucedido o usuário deve existir no banco de dados.
+
+## Rotas com o usuário logado
+
+- **`POST /logout`**
+- A rota apaga o cookie JWT armazenado.
+
+- **`GET /pessoa/list`**
+- A rota retorna as informações do usuário logado.
+```JSON
+{
+	"pessoa": [
+		{
+			"first_name": string,
+			"last_name": string,
+			"username": string,
+			"email": string,
+		}
+	]
+}
+```
+
+- **`PUT /pessoa/updatePassword`**
+- A rota deve receber `password` e `newPassword` dentro do corpo da requisição da seguinte forma:
+```JSON
+{
+	"password":  string,
+	"newPassword":  string
+}
+``` 
+- **`DELETE /pessoa/delete`**
+- A rota deve deleta o usuário logado do banco de dados:
+
