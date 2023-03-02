@@ -67,15 +67,16 @@ PORT = 3000
 # Rode a migração para a criação da tabela no Banco de Dados
 $ npm run migration:run
 
+# Rode a aplicação em modo de desenvolvimento!
 $ npm run dev
+
 # O servidor vai rodar na porta 3000 no endereço http://localhost:3000
 ```
-
 
 # Rotas da API e funções 
 ## Rotas sem login
 - **`POST /create/pessoas`**: A rota deve receber `first_name`, `last_name`, `username`, `password` e `email` dentro do corpo da requisição.
-- Ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+- Ela deve ser armazenada dentro de um objeto com o seguinte formato :
 ```JSON
 {
 	"first_name": string,
@@ -89,7 +90,7 @@ $ npm run dev
 - **`POST /login`**
 - A rota deve receber `username` e `password` dentro do corpo da requisição.
 - Com o login bem sucedido ele armazenará um JWT nos cookies da sessão.
-- Ela deve ser armazenada dentro de um objeto com o formato como o seguinte:
+- Ela deve ser armazenada dentro de um objeto com o seguinte formato:
 ```JSON
 {
 	"username": string,
